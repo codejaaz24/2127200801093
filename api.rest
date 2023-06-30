@@ -1,0 +1,52 @@
+# POST http://104.211.219.98/train/register
+
+# {
+#    "companyName":"CodeJaaz_Stations",
+#    "ownerName":"SyedM",
+#    "rollNo":"200801093",
+#    "ownerEmail":"2020it0157@vce.ac.in",
+#    "accessCode":"nNPGsi"
+# }
+
+# HTTP/1.1 200 OK
+# Date: Fri, 30 Jun 2023 14:54:52 GMT
+# Content-Type: application/json
+# Content-Length: 197
+# Connection: close
+# X-Content-Type-Options: nosniff
+# X-XSS-Protection: 1;mode=block
+
+# {
+#   "companyName": "CodeJaaz_Stations",
+#   "clientID": "a82d7f1d-8a40-47c4-962b-5b6a7a992340",
+#   "clientSecret": "QHWIGRYPwqfeXSWm",
+#   "ownerName": "SyedM",
+#   "ownerEmail": "2020it0157@vce.ac.in",
+#   "rollNo": "200801093"
+# }
+
+# POST http://104.211.219.98/train/auth
+
+# {
+# "companyName": "CodeJaaz_Stations" ,
+# "clientlD": "a82d7f1d-8a40-47c4-962b-5b6a7a992340" ,
+# "ownerName": "SyedM",
+# "ownerEmail": "2020it0157@vce.ac.in",
+# "rollNo": "200801093",
+# "clientSecret":"QHWIGRYPwqfeXSWm"
+# }
+
+# HTTP/1.1 404 Not Found
+# Date: Fri, 30 Jun 2023 14:56:34 GMT
+# Content-Type: text/plain; charset=utf-8
+# Content-Length: 79
+# Connection: close
+
+# {
+#   "message": "provided fields does not match with any of our registered client"
+# }
+
+GET http://104.211.219.98:80/train/trains
+{
+    Authorization: "Bearer"
+}
